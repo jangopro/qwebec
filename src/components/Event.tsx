@@ -24,15 +24,21 @@ export default class Event extends Component<Props> {
           <Link className="event-name" to={`/event/${event.id}`}>
             <span>{event.name}</span>
           </Link>
-          <strong className="event-location">{event.city}</strong>
+          <strong className="event-location">
+            <i className="fas fa-map-marker-alt"></i> {event.city}
+          </strong>
           <div className="event-time-price-block">
             <div>
+              <i className="fas fa-clock"></i>{" "}
               {event.date.toLocaleTimeString("fr-ca", {
                 hour: "2-digit",
                 minute: "2-digit"
               })}
             </div>
-            <div>{event.price ? `${event.price}$` : "Gratuit"}</div>
+            <div>
+              <i className="fas fa-usd-circle"></i>{" "}
+              {event.price ? `${event.price}$` : "Gratuit"}
+            </div>
           </div>
         </div>
       </div>
