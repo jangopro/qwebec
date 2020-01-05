@@ -3,6 +3,6 @@ export interface EventType {
     name: string;
     description: string;
     city: string;
-    date: Date;
+    date: string;
     price: number;
 }

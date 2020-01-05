@@ -1,8 +1,16 @@
 [
     {
-        "name": "HacktoberFest 2020"
+        "name": "HacktoberFest 2020",
+        "description": "Mumbo Jumbo Mumbo Jumbo Mumbo Jumbo Mumbo Jumbo Mumbo Jumbo",
+        "city": "Québec",
+        "date": 1578198067,
+        "price": 10
     },
     {
-        "name": "HacktoberFest 2021"
+        "name": "HacktoberFest 2021",
+        "description": "Mumbo Jumbo Mumbo Jumbo Mumbo Jumbo Mumbo Jumbo Mumbo Jumbo",
+        "city": "Montréal",
+        "date": 1578198090,
+        "price": 0
     }
 ]
