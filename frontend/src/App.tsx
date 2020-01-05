@@ -6,10 +6,7 @@ import Home from './components/Home';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import EventDetails from './components/EventDetails';
 
-import axios from 'axios';
-
 const App: React.FC = () => {
-    axios.get('/api/hello').then(data => console.log(data));
     return (
         <div className="App">
             <BrowserRouter>

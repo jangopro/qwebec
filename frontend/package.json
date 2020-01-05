@@ -2,7 +2,7 @@
     "name": "qwebec",
     "version": "0.1.0",
     "private": true,
-    "proxy": "http://localhost:5000/",
+    "proxy": "http://localhost:7777/",
     "dependencies": {
         "@types/jest": "24.0.20",
         "@types/node": "12.11.7",
