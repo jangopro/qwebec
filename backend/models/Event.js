@@ -3,6 +3,7 @@ mongoose.Promise = global.Promise;
 
 const eventSchema = new mongoose.Schema({
     name: String,
+    slug: String,
     description: String,
     city: String,
     date: Date,

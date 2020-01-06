@@ -1,6 +1,7 @@
 [
     {
         "name": "HacktoberFest 2020",
+        "slug": "hacktoberfest-2020",
         "description": "Mumbo Jumbo Mumbo Jumbo Mumbo Jumbo Mumbo Jumbo Mumbo Jumbo",
         "city": "Québec",
         "date": 1578198067,
@@ -8,6 +9,7 @@
     },
     {
         "name": "HacktoberFest 2021",
+        "slug": "hacktoberfest-2021",
         "description": "Mumbo Jumbo Mumbo Jumbo Mumbo Jumbo Mumbo Jumbo Mumbo Jumbo",
         "city": "Montréal",
         "date": 1578198090,

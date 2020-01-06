@@ -8,6 +8,7 @@ interface Props {
 
 export default class Event extends Component<Props> {
     render() {
+        // TODO add unit test
         const { event } = this.props;
         return (
             <div className="event-block">
@@ -21,7 +22,7 @@ export default class Event extends Component<Props> {
                     </span>
                 </div>
                 <div className="event-infos">
-                    <Link className="event-name" to={`/event/${event._id}`}>
+                    <Link className="event-name" to={`/event/${event.slug}`}>
                         <span>{event.name}</span>
                     </Link>
                     <strong className="event-location">

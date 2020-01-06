@@ -11,13 +11,15 @@ export default class EventListing extends Component {
     }
 
     componentDidMount() {
-        axios.get('/api/hello').then(data => {
+        axios.get('/api/events').then(data => {
             this.setState({ events: data.data.events });
         });
     }
 
     render() {
         // TODO put back to typescript
+        // TODO add unit test
+
         const EventList = this.state.events.map(event => {
             return <Event key={event._id} event={event} />;
         });
