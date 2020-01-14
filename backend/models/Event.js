@@ -7,7 +7,10 @@ const eventSchema = new mongoose.Schema({
     description: String,
     city: String,
     date: Date,
-    price: Number
+    price: Number,
+    url: String,
+    address: String,
+    author: String
 });
 
 module.exports = mongoose.model('Event', eventSchema);
