@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import EventListing from './EventListing.jsx';
 
-export default class Home extends Component {
-    render() {
-        return <EventListing />;
-    }
+export default function Home() {
+    return <EventListing />;
 }
