@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import Event from './Event';
 import axios from 'axios';
+import { EventType } from '../types/types';
 
 export default function EventListing() {
-    const [events, setEvents] = useState([]);
+    const [events, setEvents] = useState<EventType[]>();
 
     useEffect(() => {
         axios.get('/api/events').then(data => {
             setEvents(data.data.events);
         });
     }, []);
+
+    if (!events) {
+        return <div>Loading...</div>;
+    }
 
     const EventList = events.map(event => {
         return <Event key={event._id} event={event} />;
