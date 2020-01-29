@@ -1,11 +1,20 @@
-import React, { FunctionComponent, useEffect, useState } from 'react';
+import React, { FunctionComponent, useEffect, useState, ProviderProps } from 'react';
 import axios from 'axios';
 import { EventType } from '../types/types';
-const EventDetails: FunctionComponent = () => {
+import { RouteComponentProps } from 'react-router-dom';
+
+interface MatchParams {
+    id: string;
+}
+
+interface MatchProps extends RouteComponentProps<MatchParams> {}
+
+const EventDetails: FunctionComponent<MatchProps> = (props: MatchProps) => {
+    const { id } = props.match.params;
     const [event, setEvent] = useState<EventType | null>();
 
     useEffect(() => {
-        axios.get('/api/events/hacktoberfest-2020').then(data => {
+        axios.get(`/api/events/${id}`).then(data => {
             // TODO rewrite this, ugly
             setEvent(data.data.event);
         });
