@@ -4,6 +4,9 @@ export interface EventType {
     slug: string;
     description: string;
     city: string;
+    author: string;
+    address: string;
     date: string;
     price: number;
+    url: string;
 }
