@@ -26,7 +26,7 @@ const EventDetails: FunctionComponent<MatchProps> = (props: MatchProps) => {
         <React.Fragment>
             <h2>{event.name}</h2>
             <div className="event-description">{event.description}</div>
-            <div className="event-price">{event.price}</div>
+            <div className="event-price">{event.price ? `${event.price}$` : 'Gratuit'}</div>
             <div className="event-author">{event.author}</div>
             <div className="event-address">{event.address}</div>
             <div className="event-city">{event.city}</div>
