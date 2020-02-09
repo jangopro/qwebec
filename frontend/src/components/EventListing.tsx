@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Event from './Event';
+import EventListingItem from './EventListingItem';
 import axios from 'axios';
 import { EventType } from '../types/types';
 
@@ -17,7 +17,7 @@ export default function EventListing() {
     }
 
     const EventList = events.map(event => {
-        return <Event key={event._id} event={event} />;
+        return <EventListingItem key={event._id} event={event} />;
     });
 
     return (

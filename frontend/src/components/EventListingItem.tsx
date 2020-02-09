@@ -6,7 +6,7 @@ interface Props {
     event: EventType;
 }
 
-export default function Event(props: Props) {
+export default function EventListingItem(props: Props) {
     const { event } = props;
     return (
         <div className="event-block">
@@ -22,7 +22,8 @@ export default function Event(props: Props) {
                     <span>{event.name}</span>
                 </Link>
                 <strong className="event-location">
-                    <i className="fas fa-map-marker-alt"></i> {event.city}
+                    <i className="fas fa-map-marker-alt"></i>
+                    <span className="event-city">{event.city}</span>
                 </strong>
                 <div className="event-time-price-block">
                     <div>
@@ -34,7 +35,9 @@ export default function Event(props: Props) {
                     </div>
                     <div>
                         <i className="fas fa-usd-circle"></i>{' '}
-                        {event.price ? `${event.price}$` : 'Gratuit'}
+                        <span className="event-price">
+                            {event.price ? `${event.price}$` : 'Gratuit'}
+                        </span>
                     </div>
                 </div>
             </div>
