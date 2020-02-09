@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect, useState, ProviderProps } from 'react';
+import React, { FunctionComponent, useEffect, useState } from 'react';
 import axios from 'axios';
 import { EventType } from '../types/types';
 import { RouteComponentProps } from 'react-router-dom';
@@ -24,6 +24,9 @@ const EventDetails: FunctionComponent<MatchProps> = (props: MatchProps) => {
     }
     return (
         <React.Fragment>
+            <a className="back-link" href="/">
+                Retour
+            </a>
             <h2>{event.name}</h2>
             <div className="event-description">{event.description}</div>
             <div className="event-price">{event.price ? `${event.price}$` : 'Gratuit'}</div>
@@ -32,7 +35,7 @@ const EventDetails: FunctionComponent<MatchProps> = (props: MatchProps) => {
             <div className="event-city">{event.city}</div>
             <div className="event-date">{event.date}</div>
             <a href={event.url} className="event-url">
-                Voir l'event
+                Voir l'evenement
             </a>
         </React.Fragment>
     );

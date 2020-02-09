@@ -71,7 +71,9 @@ it('should render a basic event', async () => {
     expect(container.querySelector('.event-city')!.textContent).toBe(fakeEvent.city);
     expect(container.querySelector('.event-date')!.textContent).toBe(fakeEvent.date.toString());
     expect(container.querySelector('.event-url')!.getAttribute('href')).toBe(fakeEvent.url);
-    expect(container.querySelector('.event-url')!.textContent).toBe("Voir l'event");
+    expect(container.querySelector('.event-url')!.textContent).toBe("Voir l'evenement");
+
+    expect(container.querySelector('.back-link')!.getAttribute('href')).toBe('/');
 });
 it('should render free', async () => {
     const data = {
