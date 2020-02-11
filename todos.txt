@@ -1,0 +1,2 @@
+// TODO: Integrate ESLint
+// TODO: Integrate stylelint (Frontend)

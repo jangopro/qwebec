@@ -18,6 +18,17 @@ const fakeEvent = {
     date: 1578198067,
     url: 'http://test.com'
 };
+const fakeEvent2 = {
+    name: 'HackotberFest 2020',
+    slug: 'hacktober-2020',
+    description: 'Une formationd e react et shoobidoo wap!',
+    author: 'Marc Bellandron',
+    price: 0,
+    address: '330 rue du peuple',
+    city: 'Montreal',
+    date: 1578198067,
+    url: 'http://test.com'
+};
 
 beforeEach(async () => {
     container = document.createElement('div');
@@ -43,11 +54,34 @@ it('should render a basic event', async () => {
     expect(container.querySelector('.event-price')!.textContent).toBe(
         `${fakeEvent.price.toString()}$`
     );
+    expect(container.querySelector('.event-time')!.textContent).toBe(
+        new Date(fakeEvent.date).toLocaleTimeString('fr-ca', {
+            hour: '2-digit',
+            minute: '2-digit'
+        })
+    );
     expect(container.querySelector('.event-city')!.textContent).toBe(fakeEvent.city);
     expect(container.querySelector('.event-date')!.textContent).toBe(
         new Date(fakeEvent.date).getDate().toString()
     );
+    expect(container.querySelector('.event-weekday')!.textContent).toBe(
+        new Date(fakeEvent.date).toLocaleDateString('fr-ca', { weekday: 'long' })
+    );
+    expect(container.querySelector('.event-date-month')!.textContent).toBe(
+        new Date(fakeEvent.date).toLocaleDateString('fr-ca', { month: 'long' })
+    );
     expect(container.querySelector('.event-name')!.getAttribute('href')).toBe(
         `/event/${fakeEvent.slug}`
     );
+});
+it('should render a different text if price is 0', async () => {
+    await act(async () => {
+        render(
+            <MemoryRouter>
+                <EventListingItem event={fakeEvent2} />
+            </MemoryRouter>,
+            container
+        );
+    });
+    expect(container.querySelector('.event-price')!.textContent).toBe('Gratuit');
 });

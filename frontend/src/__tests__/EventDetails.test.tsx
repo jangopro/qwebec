@@ -69,7 +69,9 @@ it('should render a basic event', async () => {
     expect(container.querySelector('.event-author')!.textContent).toBe(fakeEvent.author);
     expect(container.querySelector('.event-address')!.textContent).toBe(fakeEvent.address);
     expect(container.querySelector('.event-city')!.textContent).toBe(fakeEvent.city);
-    expect(container.querySelector('.event-date')!.textContent).toBe(fakeEvent.date.toString());
+    expect(container.querySelector('.event-date')!.textContent).toBe(
+        new Date(fakeEvent.date).toLocaleDateString('fr-ca')
+    );
     expect(container.querySelector('.event-url')!.getAttribute('href')).toBe(fakeEvent.url);
     expect(container.querySelector('.event-url')!.textContent).toBe("Voir l'evenement");
 

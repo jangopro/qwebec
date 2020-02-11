@@ -15,7 +15,9 @@ export default function EventListingItem(props: Props) {
                     {new Date(event.date).toLocaleDateString('fr-ca', { weekday: 'long' })}
                 </span>
                 <strong className="event-date">{new Date(event.date).getDate()}</strong>
-                <span>{new Date(event.date).toLocaleDateString('fr-ca', { month: 'long' })}</span>
+                <span className="event-date-month">
+                    {new Date(event.date).toLocaleDateString('fr-ca', { month: 'long' })}
+                </span>
             </div>
             <div className="event-infos">
                 <Link className="event-name" to={`/event/${event.slug}`}>
@@ -28,10 +30,12 @@ export default function EventListingItem(props: Props) {
                 <div className="event-time-price-block">
                     <div>
                         <i className="fas fa-clock"></i>{' '}
-                        {new Date(event.date).toLocaleTimeString('fr-ca', {
-                            hour: '2-digit',
-                            minute: '2-digit'
-                        })}
+                        <span className="event-time">
+                            {new Date(event.date).toLocaleTimeString('fr-ca', {
+                                hour: '2-digit',
+                                minute: '2-digit'
+                            })}
+                        </span>
                     </div>
                     <div>
                         <i className="fas fa-usd-circle"></i>{' '}

@@ -33,7 +33,7 @@ const EventDetails: FunctionComponent<MatchProps> = (props: MatchProps) => {
             <div className="event-author">{event.author}</div>
             <div className="event-address">{event.address}</div>
             <div className="event-city">{event.city}</div>
-            <div className="event-date">{event.date}</div>
+            <div className="event-date">{new Date(event.date).toLocaleDateString('fr-ca')}</div>
             <a href={event.url} className="event-url">
                 Voir l'evenement
             </a>
