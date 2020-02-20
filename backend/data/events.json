@@ -4,10 +4,13 @@
         "slug": "hacktoberfest-2020",
         "description": "Mumbo Jumbo Mumbo Jumbo Mumbo Jumbo Mumbo Jumbo Mumbo Jumbo",
         "city": "Québec",
-        "date": 1578198067,
+        "startDate": 1578198067,
+        "endDate": 1580837995,
         "price": 10,
         "author": "Marc Bellandron",
         "address": "330 rue du peuple",
+        "postalCode": "G1J 1G6",
+        "venue": "Spektrum",
         "url": "http://test.com"
     },
     {
@@ -15,10 +18,13 @@
         "slug": "hacktoberfest-2021",
         "description": "Mumbo Jumbo Mumbo Jumbo Mumbo Jumbo Mumbo Jumbo Mumbo Jumbo",
         "city": "Montréal",
-        "date": 1578198090,
+        "startDate": 1578198090,
+        "endDate": 1582211995,
         "price": 0,
         "author": "Euron Greyjoy",
         "address": "80 boulevard des gorilles",
+        "postalCode": "F4R 6J8",
+        "venue": "Noctem",
         "url": "http://test.com"
     },
     {
@@ -26,10 +32,13 @@
         "slug": "formation-de-react-nextjs",
         "description": "Une formationd e react et shoobidoo wap!",
         "city": "Sherbrooke",
-        "date": 1578888888,
+        "startDate": 1578888888,
+        "endDate": 1581137995,
         "price": 0,
         "author": "Jacques Bellandron",
         "address": "330 rue du peuple",
+        "postalCode": "L9P 3E4",
+        "venue": "Impérial",
         "url": "http://test.com"
     },
     {
@@ -37,10 +46,13 @@
         "slug": "long-event-wow-damn",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur gravida ultricies lacus a suscipit. Vestibulum eget iaculis metus, id tincidunt ipsum. Ut posuere orci eu augue gravida lobortis. Pellentesque gravida nunc sed nunc porttitor mattis. Nullam augue tellus, suscipit eu neque tempor, congue sollicitudin felis. Mauris hendrerit tempus consectetur. Morbi bibendum velit risus. Etiam ac lacus eu nunc gravida iaculis eget et risus. Nunc scelerisque, augue vitae placerat gravida, sapien neque feugiat augue, a faucibus magna nisi a risus.Aliquam ut tortor quis turpis dictum interdum. Maecenas ultricies placerat pretium. Proin id nibh eget sem condimentum tristique. Aenean turpis sem, gravida id lacus ut, aliquam tincidunt nunc. Sed vitae odio dolor. Nulla auctor fermentum magna, sed bibendum ligula porta quis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque ultricies dui non lacus faucibus lacinia. Aliquam sit amet neque eu nisi volutpat fringilla nec a turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus id ultricies velit. Quisque fringilla porta vestibulum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In ut felis nec sapien condimentum bibendum.Nullam molestie lectus a metus condimentum mattis. Morbi a congue risus. Sed gravida vulputate est. Integer condimentum est eu feugiat lobortis. Suspendisse potenti. Cras et fermentum metus. Duis a erat eu nisi aliquam semper. Donec tincidunt varius risus, nec rhoncus justo efficitur ut. Sed accumsan augue nec gravida suscipit. Integer sit amet mi ac enim pellentesque condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi faucibus nisi vitae sodales egestas. Aliquam pellentesque tortor quis hendrerit sodales. Proin varius augue eget nisl porttitor sollicitudin. Nunc at neque elementum, pellentesque ex ut, tincidunt ligula. Maecenas magna mauris, mattis sed justo a, pulvinar faucibus erat.Mauris gravida a erat sit amet volutpat. Praesent pretium vel dolor sit amet commodo. Integer finibus nunc vel viverra bibendum. Praesent nec dapibus eros. Cras in purus eros. Integer mattis tempus nisi, eu faucibus velit tempus dapibus. Vivamus non urna lorem.Etiam luctus dui quis quam faucibus, et lobortis purus scelerisque. Vivamus tincidunt molestie lectus sed viverra. Nullam tincidunt orci in mattis bibendum. Vivamus quis dolor neque. Vivamus tincidunt ante ante, vitae elementum ligula lacinia eget. Sed at eros nec dui fermentum gravida at luctus massa. Etiam id semper quam, quis vehicula massa.",
         "city": "Trois-Rivières",
-        "date": 1578884806,
+        "startDate": 1578884806,
+        "endDate": 1582237995,
         "price": 20,
         "author": "Petit Ronf",
         "address": "4566 rue des citrons",
+        "postalCode": "D3R 6J7",
+        "venue": "Impérial",
         "url": "http://test.com"
     }
 ]

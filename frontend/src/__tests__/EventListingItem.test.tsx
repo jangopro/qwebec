@@ -15,7 +15,8 @@ const fakeEvent = {
     price: 10,
     address: '330 rue du peuple',
     city: 'Montreal',
-    date: 1578198067,
+    startDate: 1578198067,
+    endDate: 1578198067,
     url: 'http://test.com'
 };
 const fakeEvent2 = {
@@ -26,7 +27,8 @@ const fakeEvent2 = {
     price: 0,
     address: '330 rue du peuple',
     city: 'Montreal',
-    date: 1578198067,
+    startDate: 1578198067,
+    endDate: 1578198067,
     url: 'http://test.com'
 };
 
@@ -55,20 +57,20 @@ it('should render a basic event', async () => {
         `${fakeEvent.price.toString()}$`
     );
     expect(container.querySelector('.event-time')!.textContent).toBe(
-        new Date(fakeEvent.date).toLocaleTimeString('fr-ca', {
+        new Date(fakeEvent.startDate).toLocaleTimeString('fr-ca', {
             hour: '2-digit',
             minute: '2-digit'
         })
     );
     expect(container.querySelector('.event-city')!.textContent).toBe(fakeEvent.city);
     expect(container.querySelector('.event-date')!.textContent).toBe(
-        new Date(fakeEvent.date).getDate().toString()
+        new Date(fakeEvent.startDate).getDate().toString()
     );
     expect(container.querySelector('.event-weekday')!.textContent).toBe(
-        new Date(fakeEvent.date).toLocaleDateString('fr-ca', { weekday: 'long' })
+        new Date(fakeEvent.startDate).toLocaleDateString('fr-ca', { weekday: 'long' })
     );
     expect(container.querySelector('.event-date-month')!.textContent).toBe(
-        new Date(fakeEvent.date).toLocaleDateString('fr-ca', { month: 'long' })
+        new Date(fakeEvent.startDate).toLocaleDateString('fr-ca', { month: 'long' })
     );
     expect(container.querySelector('.event-name')!.getAttribute('href')).toBe(
         `/event/${fakeEvent.slug}`

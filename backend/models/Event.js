@@ -1,19 +1,19 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-// TODO: Code postal
 // TODO: author pour organizers?
-// TODO: Le nom de l'endroit? ex: Centre de foires
-// TODO: Date de début / Date de fin
 
 const eventSchema = new mongoose.Schema({
     name: String,
     slug: String,
     description: String,
     city: String,
-    date: Date,
+    startDate: Date,
+    endDate: Date,
     price: Number,
     url: String,
     address: String,
+    postalCode: String,
+    venue: String,
     author: String
 });
 

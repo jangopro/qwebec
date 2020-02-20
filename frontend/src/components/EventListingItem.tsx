@@ -12,11 +12,11 @@ export default function EventListingItem(props: Props) {
         <div className="event-block">
             <div className="event-date-block">
                 <span className="event-weekday">
-                    {new Date(event.date).toLocaleDateString('fr-ca', { weekday: 'long' })}
+                    {new Date(event.startDate).toLocaleDateString('fr-ca', { weekday: 'long' })}
                 </span>
-                <strong className="event-date">{new Date(event.date).getDate()}</strong>
+                <strong className="event-date">{new Date(event.startDate).getDate()}</strong>
                 <span className="event-date-month">
-                    {new Date(event.date).toLocaleDateString('fr-ca', { month: 'long' })}
+                    {new Date(event.startDate).toLocaleDateString('fr-ca', { month: 'long' })}
                 </span>
             </div>
             <div className="event-infos">
@@ -31,7 +31,7 @@ export default function EventListingItem(props: Props) {
                     <div>
                         <i className="fas fa-clock"></i>{' '}
                         <span className="event-time">
-                            {new Date(event.date).toLocaleTimeString('fr-ca', {
+                            {new Date(event.startDate).toLocaleTimeString('fr-ca', {
                                 hour: '2-digit',
                                 minute: '2-digit'
                             })}

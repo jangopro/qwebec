@@ -18,7 +18,10 @@ const fakeEvent = {
     price: 10,
     address: '330 rue du peuple',
     city: 'Montreal',
-    date: 1578198067,
+    startDate: 1578198067,
+    endDate: 1878198067,
+    venue: 'Impérial',
+    postalCode: 'G4T 3R5',
     url: 'http://test.com'
 };
 
@@ -29,7 +32,7 @@ const fakeEvent2 = {
     price: 0,
     address: '330 rue du peuple',
     city: 'Montreal',
-    date: 1578198067,
+    startDate: 1578198067,
     url: 'http://test.com'
 };
 
@@ -69,8 +72,13 @@ it('should render a basic event', async () => {
     expect(container.querySelector('.event-author')!.textContent).toBe(fakeEvent.author);
     expect(container.querySelector('.event-address')!.textContent).toBe(fakeEvent.address);
     expect(container.querySelector('.event-city')!.textContent).toBe(fakeEvent.city);
-    expect(container.querySelector('.event-date')!.textContent).toBe(
-        new Date(fakeEvent.date).toLocaleDateString('fr-ca')
+    expect(container.querySelector('.event-postal-code')!.textContent).toBe(fakeEvent.postalCode);
+    expect(container.querySelector('.event-venue')!.textContent).toBe(fakeEvent.venue);
+    expect(container.querySelector('.event-start-date')!.textContent).toBe(
+        new Date(fakeEvent.startDate).toLocaleDateString('fr-ca')
+    );
+    expect(container.querySelector('.event-end-date')!.textContent).toBe(
+        new Date(fakeEvent.endDate).toLocaleDateString('fr-ca')
     );
     expect(container.querySelector('.event-url')!.getAttribute('href')).toBe(fakeEvent.url);
     expect(container.querySelector('.event-url')!.textContent).toBe("Voir l'evenement");

@@ -5,8 +5,11 @@ export interface EventType {
     description: string;
     city: string;
     author: string;
+    postalCode: string;
+    venue: string;
     address: string;
-    date: string;
+    startDate: Date;
+    endDate: Date;
     price: number;
     url: string;
 }
